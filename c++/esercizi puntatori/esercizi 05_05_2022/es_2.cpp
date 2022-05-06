@@ -10,7 +10,7 @@ int main()
     int a, b;
     
     cout<<"Inserisci due numeri: "<<endl;
-    ci>>a>>b;
+    cin>>a>>b;
     int *d=&a; 
     int *c=&b;
     if (*d>*c){
