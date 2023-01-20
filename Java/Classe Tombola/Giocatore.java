@@ -5,7 +5,7 @@ class Giocatore {
 
     public Giocatore(String nome) {
         this.nome = nome;
-        // inizializzazione della matrice di numeri per le cartelle
+
         cartelle = new int[3][9];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -18,9 +18,9 @@ class Giocatore {
         return nome;
     }
 
-    // metodo per riempire le cartelle con numeri casuali
+
     public void riempiCarte() {
-        // utilizzare una classe Random per generare numeri casuali
+
         Random rand = new Random();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -30,7 +30,7 @@ class Giocatore {
         }
     }
 
-    // metodo per controllare se un numero estratto è presente sulla cartella
+
     public boolean controllaNumero(int numero) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -42,7 +42,6 @@ class Giocatore {
         return false;
     }
 
-    // metodo per coprire un numero estratto sulla cartella
     public void copriNumero(int numero) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -53,7 +52,7 @@ class Giocatore {
         }
     }
 
-    // metodo per controllare se un giocatore ha vinto
+
     public boolean haVinto() {
         for (int i = 0; i < 3; i++) {
             boolean rigaCompleta = true;
@@ -70,7 +69,6 @@ class Giocatore {
         return false;
     }
 
-    // metodo per controllare se un giocatore ha completato una combinazione intermedia
     public int controllaCombinazione() {
         for (int i = 0; i < 3; i++) {
             int numeriCoperti = 0;
@@ -89,6 +87,6 @@ class Giocatore {
                 return 5; // cinquina
             }
         }
-        return 0; // nessuna combinazione
+        return 0; 
     }
 }
