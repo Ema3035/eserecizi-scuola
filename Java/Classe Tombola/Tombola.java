@@ -9,7 +9,7 @@ class Tombola {
     }
 
     public void gioca() {
-        // ciclo while per continuare a estrarre numeri finché non c'è un vincitore
+
         while (true) {
             int numeroEstratto = tabellone.estraiNumero();
             // controllare se un giocatore ha vinto
@@ -19,7 +19,7 @@ class Tombola {
                     return;
                 }
             }
-            // controllare se un giocatore ha completato una combinazione intermedia
+
             for (int i = 0; i < giocatori.length; i++) {
                 int combinazione = giocatori[i].controllaCombinazione();
                 if (combinazione > 0) {
